@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site do Grupo</title>
+  <meta name="author" content="Grupo">
+  <meta name="description" content="Site do Grupo">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all">
+  <link rel="icon" href="favicon.svg" type="image/svg">
+</head>
+
+<body>
+  <header>
+    <h1>Site do Grupo</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#group">Grupo</a></li>
+      <li><a href="#blog">Lista de postagens</a></li>
+      <li><a href="#links">Links</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Estudo de HTML e CSS</h2>
+
+      <section id="group">
+        <h3>Grupo</h3>
+
+        <p>Grupo de &lt;html&gt;.</p>
+
+        <ul>
+          <li><a href="https://github.com/wadson2005">Wadson</a></li>
+          <li><a href="https://github.com/torvalds">José Macêdo</a></li>
+          <li><a href="https://github.com/hmccl">Hélio</a></li>
+        </ul>
+      </section>
+
+      <section id="blog">
+        <h3>Blog</h3>
+
+        <ul>
+          <li><a href="#text">Texto</a></li>
+          <li><a href="#list">Lista</a></li>
+          <li><a href="#image">Imagen</a></li>
+          <li><a href="#table">Tabela</a></li>
+          <li><a href="#form">Formulário</a></li>
+        </ul>
+      </section>
+
+      <section id="text">
+        <h4>Texto</h4>
+
+        <p>
+          Algum tempo hesitei se devia abrir estas memórias pelo princípio ou
+          pelo fim, isto é, se poria em primeiro lugar o meu nascimento ou a
+          minha morte. Suposto o uso vulgar seja começar pelo nascimento,
+          duas considerações me levaram a adotar diferente método: a
+          primeira é que eu não sou propriamente um autor defunto, mas um
+          defunto autor, para quem a campa foi outro berço; a segunda é que
+          o escrito ficaria assim mais galante e mais novo. Moisés, que também
+          contou a sua morte, não a pôs no intróito, mas no cabo: diferença
+          radical entre este livro e o Pentateuco.
+        </p>
+      </section>
+
+      <section id="list">
+        <h4>Lista</h4>
+
+        <ol>
+          <li>Escitores</li>
+          <ul>
+            <li>Machado de Assis</li>
+            <li>Cecília Meireles</li>
+          </ul>
+          <li>Pintores</li>
+          <ul>
+            <li>Tarsila do Amaral</li>
+            <li>Alfredo Volpi</li>
+          </ul>
+        </ol>
+
+        <dl>
+          <dt>Proteínas</dt>
+          <dd>
+            Proteínas são macromoléculas biológicas constituídas por
+            uma ou mais cadeias de aminoácidos.
+          </dd>
+        </dl>
+      </section>
+
+      <section id="image">
+        <h4>Imagem</h4>
+
+        <figure>
+          <img src="images/antonov.png" alt="Avião na aproximação final ao aeroporto de Moscou.">
+          <figcaption>Antonov</figcaption>
+        </figure>
+      </section>
+
+      <section id="table">
+        <h4>Tabela</h4>
+
+        <figure>
+          <table>
+            <tr>
+              <th>Estado</th>
+              <th>Capital</th>
+            </tr>
+            <tr>
+              <td>Maranhão</td>
+              <td>São Luís</td>
+            </tr>
+            <tr>
+              <td>Piauí</td>
+              <td>Teresina</td>
+            </tr>
+            <tr>
+              <td>Ceará</td>
+              <td>Fortaleza</td>
+            </tr>
+            <tr>
+              <td>Rio Grande do Norte</td>
+              <td>Natal</td>
+            </tr>
+            <tr>
+              <td>Paraíba</td>
+              <td>João Pessoa</td>
+            </tr>
+            <tr>
+              <td>Pernambuco</td>
+              <td>Recife</td>
+            </tr>
+            <tr>
+              <td>Alagoas</td>
+              <td>Maceió</td>
+            </tr>
+            <tr>
+              <td>Sergipe</td>
+              <td>Aracaju</td>
+            </tr>
+            <tr>
+              <td>Bahia</td>
+              <td>Salvador</td>
+            </tr>
+          </table>
+          <figcaption>Capitais do nordeste brasileiro</figcaption>
+        </figure>
+
+      </section>
+      <section id="form">
+        <h4>Formulário</h4>
+
+        <form method="post">
+          <label>
+            Name:
+            <input name="submitted-name" autocomplete="name" />
+          </label>
+          <button>Save</button>
+        </form>
+
+        <form method="post">
+          <fieldset>
+            <legend>Do you agree to the terms?</legend>
+            <label><input type="radio" name="radio" value="yes" /> Yes</label>
+            <label><input type="radio" name="radio" value="no" /> No</label>
+          </fieldset>
+        </form>
+      </section>
+    </article>
+
+    <aside id="links">
+      <h3>Links úteis</h3>
+
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web">MDN Web Docs</a></li>
+        <li><a href="https://www.typescriptlang.org/docs/handbook/intro.html">The TypeScript Handbook</a></li>
+        <li><a href="https://www.htmlforpeople.com/">HTML for People</a></li>
+        <li><a href="https://learngitbranching.js.org/">Learn Git Branching</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Obrigado.</p>
+    <p>
+      <a href="#">Topo da página</a>
+    </p>
+  </footer>
+</body>
+
+</html>
