@@ -102,6 +102,48 @@ td {
   border: 0.005rem solid var(--green);
 }
 
+form {
+  display: grid;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+fieldset {
+  font-weight: bold;
+  border: 0.05rem solid var(--blue);
+  border-radius: 1rem;
+}
+
+label {
+  font-weight: normal;
+  padding: 0.2rem;
+}
+
+input {
+  border: 0.005rem solid var(--blue);
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+}
+
+button {
+  background-color: var(--bg-blue-subtle);
+  color: var(--fg-main);
+  border: 0.005rem solid var(--blue);
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--bg-blue-intense);
+}
+
+div {
+  padding: 0.2rem;
+}
+
 h1,
 h2,
 h3,
