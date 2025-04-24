@@ -165,18 +165,26 @@
         <h4>Formulário</h4>
 
         <form method="post">
-          <label>
-            Nome:
-            <input name="submitted-name" autocomplete="name">
-          </label>
-          <button>Salvar</button>
+          <div>
+            <label for="submitted-name">Nome:</label>
+            <input type="text" name="submitted-name" autocomplete="name">
+          </div>
+          <div>
+            <button>Salvar</button>
+          </div>
         </form>
 
         <form method="post">
           <fieldset>
             <legend>Qual bebida você prefere?</legend>
-            <label><input type="radio" name="radio" value="coffee"> Café</label>
-            <label><input type="radio" name="radio" value="tea"> Chá</label>
+            <div>
+              <input type="radio" name="radio" value="coffee">
+              <label>Café</label>
+            </div>
+            <div>
+              <input type="radio" name="radio" value="tea">
+              <label>Chá</label>
+            </div>
           </fieldset>
         </form>
       </section>
