@@ -1,31 +1,47 @@
-import axios from 'axios';
-import * as cheerio from 'cheerio';
+const axios = require('axios');
+const cheerio = require('cheerio');
+
+let visitedUrls = new Set();
 
 async function crawlPage(url) {
   try {
+    if (visitedUrls.has(url)) {
+      return;
+    }
+
+    visitedUrls.add(url);
+
     let response = await axios.get(url);
     let $ = cheerio.load(response.data);
+    let links = $('a');
 
-    let links = [];
-    $('a').each((i, el) => {
-      let text = $(el).text();
-      let href = $(el).attr('href');
+    links.each((i, ele) => {
+      let href = $(ele).attr('href');
       if (href) {
-        let absoluteHref = new URL(href, url).toString();
-        links.push({ text, absoluteHref });
+        crawlPage(urlRoot + href);
       }
     });
 
-    console.log('Links da página\n', links);
+    return;
 
   } catch (err) {
-    console.log('Erro ao acessar a página!\n', err.message);
+    console.error('Erro na varredura\n');
+    return err.message;
   }
 }
 
-//crawlPage('https://hmccl.github.io/sci-fi/blade_runner.html')
-
 // Servidor local
 // python3 -m http.server
-crawlPage('http://127.0.0.1:8000/sci-fi/blade_runner.html')
 
+// let urlRoot = 'https://hmccl.github.io/sci-fi/';
+let urlRoot = 'http://127.0.0.1:8000/sci-fi/';
+let urlPage = 'duna.html';
+
+async function main() {
+  await crawlPage(urlRoot + urlPage)
+    .catch(error => console.error('Erro ao acessar a página\n', error));
+
+  console.log(Array.from(visitedUrls));
+}
+
+main();
